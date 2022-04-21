@@ -1,4 +1,4 @@
-// import { types } from "../types/types";
+ import { types } from "../types/types";
 
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -21,5 +21,12 @@ import { createSlice } from "@reduxjs/toolkit";
 export const authReducer = createSlice({
     name: "auth",
     initialState: {},
-    reducers: {}
+    reducers: {
+        [types.login]: (state, action) => {
+            return(
+                state.uid = action.payload.uid,
+                state.name = action.payload.displayName
+            );
+        }
+    }
 });
