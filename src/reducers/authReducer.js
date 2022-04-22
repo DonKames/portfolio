@@ -27,6 +27,9 @@ export const authReducer = createSlice({
                 state.uid = action.payload.uid,
                 state.name = action.payload.displayName
             );
+        },
+        [types.logout]: (state) => {
+            return {};
         }
     }
 });

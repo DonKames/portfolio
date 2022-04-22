@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
+import { AppRouter } from './components/routers/AppRouter';
 
-import { AppRouter } from './components/AppRouter';
 import {store} from './store/store';
 
 const PortfolioApp = () => {
